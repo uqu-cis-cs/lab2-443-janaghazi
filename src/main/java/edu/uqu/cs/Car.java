@@ -9,7 +9,7 @@ package edu.uqu.cs;
 */
 import java.util.Scanner;
 
-public class Car{
+public class Car {
 
     /************ Part 1 **************/
     /**
@@ -20,7 +20,10 @@ public class Car{
      * Syntax:
      * private dataType name;
      *
-     */
+     */ 
+
+    private String model;
+    private boolean inOutGarage;
 
     /************ Part 2 **************/
     /**
@@ -34,6 +37,11 @@ public class Car{
      * }
      */
 
+    public Car() {
+        model = "";
+        inOutGarage = false;
+    }
+
     /************ Part 3 **************/
     /**
      * Define all getter methods below
@@ -44,6 +52,12 @@ public class Car{
      * }
      */
 
+    public String getModel() {
+        return this.model;        
+    }
+    public boolean getInOutGarage() {
+        return this.inOutGarage;        
+    }
 
     /************ Part 4 **************/
     /**
@@ -55,6 +69,12 @@ public class Car{
      *
      */
 
+    public void setModel(String typeName) {
+        this.model = typeName;
+    }
+    public void setInOutGarage(boolean f) {
+        this.inOutGarage = f;
+    }
 
     /************ Part 5 **************/
     /**
@@ -64,6 +84,13 @@ public class Car{
      *
      */
 
+    public void moveCarOut() {
+        inOutGarage = false;
+    }
 
+    public void moveCarIn() {
+        inOutGarage = true;
+        
+    }
 
 }
